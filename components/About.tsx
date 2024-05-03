@@ -16,13 +16,13 @@ const About = () => {
 				<div className='mb-[3rem] flex items-center md:space-x-10'>
 					<span className='w-[100px] hidden md:block h-[5px] bg-slate-400 rounded-sm'></span>
 					<p className='text-[19px] text-slate-300 w-[80%]'>
-						I'm a Full-Stack Web Developer
+						I am a Full-Stack Web Developer
 						and a student at 1337 Coding
 						School. I find satisfaction in
 						problem-solving and refining my
 						work. I actively explore algorithms
 						and stay updated with emerging
-						ideas. Additionally, I'm
+						ideas. Additionally, I am
 						enthusiastic about delving into AI,
 						particularly focusing on machine
 						learning and natural language

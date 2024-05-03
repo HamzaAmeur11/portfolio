@@ -10,17 +10,17 @@ const Hero = () => {
 		<Particle />
 		<div className='w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center'>
 			<div>
-				<h1 className='text-[35px] md:text-[50px] text-white font-bold'>Hi, I'm <span className='text-yellow-500'>Hamza</span>
+				<h1 className='text-[35px] md:text-[50px] text-white font-bold'>Hi, I am <span className='text-yellow-500'>Hamza</span>
 				</h1>
 				<TextEffect />
 				<p className='mt-[1.5rem] text-[18px] text-[#ffffff92]'>
-					I'm a Full-Stack Web Developer
+					I am a Full-Stack Web Developer
 					and a student at 1337 Coding
 					School. I find satisfaction in
 					problem-solving and refining my
 					work. I actively explore algorithms
 					and stay updated with emerging
-					ideas. Additionally, I'm
+					ideas. Additionally, I am
 					enthusiastic about delving into AI,
 					particularly focusing on machine
 					learning and natural language
