@@ -5,7 +5,25 @@ import Image from 'next/image'
 import { ArrowDownTrayIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const Hero = () => {
-  return (
+	function downloadCV(){
+			const cvUrl = "https://raw.githubusercontent.com/HamzaAmeur11/MyCV/matser/mainCV.pdf"
+			const link = document.createElement('a');
+			link.href = cvUrl;
+			link.download = 'CV__.pdf'; // The default filename for the downloaded file
+
+			// Append the anchor to the body temporarily
+			document.body.appendChild(link);
+
+			// Programmatically click the link to trigger the download
+			link.click();
+
+			// Clean up by removing the link from the body
+			document.body.removeChild(link);
+
+	}
+
+
+	return (
 	<div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[5vh] bg-cover bg-center">
 		<Particle />
 		<div className='w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center'>
@@ -26,18 +44,19 @@ const Hero = () => {
 					learning and natural language
 					processing.
 				</p>
-				<div className='mt-[2rem] flex-col space-y-6 sm:flec sm:flex-row items-center sm:space-x-6'>
-					<button className='flex px-[2rem] hover:bg-yellow-400 transition-all duraction-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black items-center space-x-2'>
+				<div className='mt-[2rem] flex-col space-y-6 sm:flex sm:flex-row items-center sm:space-x-6'>
+					<button  className='flex px-[2rem] hover:bg-yellow-400 transition-all du py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black items-center space-x-2'
+					onClick={() => {
+						// Implement your download logic here
+						downloadCV();
+						console.log('Download CV button clicked');
+					 }}
+					>
 						<p>Download CV</p>
-						<ArrowDownTrayIcon className='w-[1.6rem] h-[1.7rem] text-black'/>
-					</button>
-					<button className='flex items-center space-x-2 '>
-						<PlayCircleIcon className='w-[4rem] h-[4rem] hover:text-yellow-400 transition-all duration-200 text-[#55e6a6]' />
-						<p className='text-[20px] font-semibold text-white'>Watch the Video</p>
 					</button>
 				</div>
 			</div>
-			<div data-aos="zoom-in" className='w-[500px] hidden bg-[55e6a5] relative lg:flex items-center rounded-full h-[500px]'>
+			<div  className='w-[500px] hidden bg-[55e6a5] relative lg:flex items-center rounded-full h-[500px]'>
 				<Image src="/images/about.jpg" alt='user' layout='fill' className='object-cover rounded-full' />
 			</div>
 		</div>

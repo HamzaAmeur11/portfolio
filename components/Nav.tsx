@@ -23,8 +23,8 @@ const Nav = ({nav , openNav}: Props) => {
 			<span className='text-yellow-300'>DEV</span>
 			</h1>
 			<div className='nav-link' onClick={() => handleClick("/")}>Home</div>
-			<div className='nav-link' onClick={() => handleClick("#about")}>About</div>
 			<div className='nav-link' onClick={() => handleClick("#services")}>Services</div>
+			<div className='nav-link' onClick={() => handleClick("#skills")}>Skills</div>
 			<div className='nav-link' onClick={() => handleClick("#projects")}>Projects</div>
 			<div className='nav-link' onClick={() => handleClick("#blog")}>Blog</div>
 			<div className='nav-link' onClick={() => handleClick("#contact")}>Contact</div>
