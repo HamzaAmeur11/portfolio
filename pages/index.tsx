@@ -1,5 +1,4 @@
-import About from '@/components/About';
-import BLog from '@/components/BLog';
+
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import MobileNav from '@/components/MobileNav';
@@ -7,7 +6,6 @@ import Nav from '@/components/Nav'
 import Projects from '@/components/Projects';
 import Services from '@/components/Services';
 import Skills from '@/components/Skills';
-import Testimonial from '@/components/Testimonial';
 import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -53,7 +51,6 @@ const HomePage = () => {
 				<Services />
 				<Skills />
 				<Projects />
-				<Testimonial />
 				<Footer />
 			</div>
 		</div>

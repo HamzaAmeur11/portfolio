@@ -32,7 +32,7 @@ const Footer = () => {
 				</div>
 				<div>
 					<h1 className='text-[25px] mb-[0.2rem] font-semibold text-white'>Send us Email</h1>
-					<p className='text-[17px] w-[90%] text-white opacity-60'>example.com <br /> example@exml.com</p>
+					<p className='text-[17px] w-[90%] text-center text-white opacity-60'><a href='mailto:hamza.1999ameur@gmail.com'>HERE</a></p>
 				</div>
 			</div>
 

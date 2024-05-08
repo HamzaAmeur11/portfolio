@@ -11,7 +11,7 @@ const About = () => {
 					ABOUT me
 				</h1>
 				<h2 className='text-[25px] md:text-[35px] lg:text-[45px] md:loading-[3rem] loading-[2rem] capitalize mb-[3rem] font-bold text-white'>
-					Trabsforming <span className='text-yellow-500'>visions</span>
+					Transforming <span className='text-yellow-500'>visions</span>
 				</h2>
 				<div className='mb-[3rem] flex items-center md:space-x-10'>
 					<span className='w-[100px] hidden md:block h-[5px] bg-slate-400 rounded-sm'></span>
@@ -29,7 +29,7 @@ const About = () => {
 						processing.
 					</p>
 				</div>
-				<button className='flex px-[2rem] hover:bg-yellow-400 transition-all duraction-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black items-center space-x-2'>
+				<button className='flex px-[2rem] hover:bg-yellow-400 transition-all duration-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black items-center space-x-2'>
 					<p>Download CV</p>
 					<ArrowDownTrayIcon className='w-[1.6rem] h-[1.7rem] text-black'/>
 				</button>
