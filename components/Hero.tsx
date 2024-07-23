@@ -6,7 +6,7 @@ import { ArrowDownTrayIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const Hero = () => {
 	function downloadCV(){
-			const cvUrl = "https://raw.githubusercontent.com/HamzaAmeur11/MyCV/matser/mainCV.pdf"
+			const cvUrl = "https://raw.githubusercontent.com/HamzaAmeur11/MyCV/matser/CVEn.pdf"
 			const link = document.createElement('a');
 			link.href = cvUrl;
 			link.download = 'CV__.pdf'; // The default filename for the downloaded file
