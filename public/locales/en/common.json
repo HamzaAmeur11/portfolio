@@ -1,0 +1,74 @@
+{
+  "common": {
+    "name": "Hamza Ameur",
+    "title": "Full-Stack & Mobile Developer",
+    "showContacts": "Show Contacts",
+    "hideContacts": "Hide Contacts"
+  },
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "intro1": "I’m a full-stack and mobile developer studying at 42 Paris. I build reliable web, mobile and desktop products with React Native, React, Next.js and NestJS.",
+    "intro2": "My experience covers REST API design, PostgreSQL-backed applications, real-time features with Socket.IO, performance optimization and collaborative delivery with Git.",
+    "whatImDoing": "What i'm doing",
+    "services": {
+      "webDesign": {
+        "title": "Full-Stack Development",
+        "description": "Building scalable web applications using React, Next.js, Node.js, and NestJS with modern best practices."
+      },
+      "webDevelopment": {
+        "title": "API Development",
+        "description": "Implementing secure RESTful APIs with optimized queries and scalable architecture."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "Professional development of cross-platform mobile applications using React Native and Expo."
+      },
+      "photography": {
+        "title": "Real-Time Systems",
+        "description": "Developing real-time applications with WebSockets and Socket.IO for interactive experiences."
+      }
+    },
+    "testimonials": "Testimonials",
+    "clients": "Clients"
+  },
+  "resume": {
+    "title": "Resume",
+    "education": "Education",
+    "experience": "Experience",
+    "mySkills": "My skills"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "all": "All",
+    "webDesign": "Web design",
+    "applications": "Applications",
+    "webDevelopment": "Web development",
+    "selectCategory": "Select category"
+  },
+  "blog": {
+    "title": "Blog",
+    "design": "Design",
+    "readMore": "Read more"
+  },
+  "contact": {
+    "title": "Contact",
+    "formTitle": "Contact Form",
+    "fullName": "Full name",
+    "email": "Email address",
+    "message": "Your Message",
+    "sendMessage": "Send Message"
+  },
+  "sidebar": {
+    "email": "Email",
+    "phone": "Phone",
+    "birthday": "Birthday",
+    "location": "Location"
+  }
+}

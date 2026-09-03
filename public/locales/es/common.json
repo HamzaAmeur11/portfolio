@@ -1,0 +1,74 @@
+{
+  "common": {
+    "name": "Hamza Ameur",
+    "title": "Desarrollador Full Stack y móvil",
+    "showContacts": "Mostrar contactos",
+    "hideContacts": "Ocultar contactos"
+  },
+  "nav": {
+    "about": "Acerca de",
+    "resume": "Currículum",
+    "portfolio": "Portafolio",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "intro1": "Soy desarrollador Full Stack y móvil y estudio en 42 Paris. Creo productos web, móviles y de escritorio con React Native, React, Next.js y NestJS.",
+    "intro2": "Mi experiencia incluye APIs REST, aplicaciones con PostgreSQL, funciones en tiempo real con Socket.IO, optimización del rendimiento y trabajo colaborativo con Git.",
+    "whatImDoing": "Lo que estoy haciendo",
+    "services": {
+      "webDesign": {
+        "title": "Diseño web",
+        "description": "El diseño más moderno y de alta calidad realizado a nivel profesional."
+      },
+      "webDevelopment": {
+        "title": "Desarrollo web",
+        "description": "Desarrollo de sitios de alta calidad a nivel profesional."
+      },
+      "mobileApps": {
+        "title": "Aplicaciones móviles",
+        "description": "Desarrollo profesional de aplicaciones para iOS y Android."
+      },
+      "photography": {
+        "title": "Fotografía",
+        "description": "Hago fotos de alta calidad de cualquier categoría a nivel profesional."
+      }
+    },
+    "testimonials": "Testimonios",
+    "clients": "Clientes"
+  },
+  "resume": {
+    "title": "Currículum",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "mySkills": "Mis habilidades"
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "all": "Todos",
+    "webDesign": "Diseño web",
+    "applications": "Aplicaciones",
+    "webDevelopment": "Desarrollo web",
+    "selectCategory": "Seleccionar categoría"
+  },
+  "blog": {
+    "title": "Blog",
+    "design": "Diseño",
+    "readMore": "Leer más"
+  },
+  "contact": {
+    "title": "Contacto",
+    "formTitle": "Formulario de contacto",
+    "fullName": "Nombre completo",
+    "email": "Dirección de correo electrónico",
+    "message": "Tu mensaje",
+    "sendMessage": "Enviar mensaje"
+  },
+  "sidebar": {
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "birthday": "Cumpleaños",
+    "location": "Ubicación"
+  }
+}

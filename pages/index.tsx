@@ -1,60 +1,78 @@
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
+import About from '@/components/About';
+import Resume from '@/components/Resume';
+import Portfolio from '@/components/Portfolio';
+import Contact from '@/components/Contact';
 
-import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import MobileNav from '@/components/MobileNav';
-import Nav from '@/components/Nav'
-import Projects from '@/components/Projects';
-import Services from '@/components/Services';
-import Skills from '@/components/Skills';
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+export default function Home() {
+  const [activeTab, setActiveTab] = useState('about');
+  const router = useRouter();
 
-const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeTab]);
 
-	const [nav, setNav] = useState(false);
-	const openNav= ()=> {	setNav(true)	}
-	const closeNav= ()=> {	setNav(false)	}
+  // Handle RTL for Arabic
+  useEffect(() => {
+    const isArabic = router.locale === 'ar';
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+    document.documentElement.lang = router.locale || 'en';
+    localStorage.setItem('NEXT_LOCALE', router.locale || 'en');
+  }, [router.locale]);
 
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'about':
+        return <About />;
+      case 'resume':
+        return <Resume />;
+      case 'portfolio':
+        return <Portfolio />;
+      case 'contact':
+        return <Contact />;
+      default:
+        return <About />;
+    }
+  };
 
-	useEffect(() =>{
-		AOS.init({
-		// Global settings:
-		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-		initClassName: 'aos-init', // class applied after initialization
-		animatedClassName: 'aos-animate', // class applied on animation
-		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  return (
+    <>
+      <Head>
+        <title>Hamza Ameur | Full-Stack &amp; Mobile Developer</title>
+        <meta name="description" content="Portfolio of Hamza Ameur, a full-stack and mobile developer studying at 42 Paris." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
+      <main className="min-h-screen w-full px-3 sm:px-5 py-4 sm:py-8 mb-20 sm:mb-8 lg:mb-0 lg:py-12 bg-smoky-black dark:bg-smoky-black">
+        <div className="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-5 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {/* Sidebar */}
+          <div className="w-full lg:w-96 lg:flex-shrink-0">
+            <Sidebar />
+          </div>
 
-		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-		offset: 120, // offset (in px) from the original trigger point
-		delay: 0, // values from 0 to 3000, with step 50ms
-		duration: 1000, // values from 0 to 3000, with step 50ms
-		easing: 'ease', // default easing for AOS animations
-		once: true, // whether animation should happen only once - while scrolling down
-		mirror: false, // whether elements should animate out while scrolling past them
-		anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-		});
-	}, [])
-
-	return (
-		<div className='overflow-x-hidden'>
-			<div>
-				<MobileNav nav={nav} closeNav={closeNav}/>
-				<Nav nav={nav} openNav={openNav}/>
-				<Hero />
-				<Services />
-				<Skills />
-				<Projects />
-				<Footer />
-			</div>
-		</div>
-	)
+          {/* Main Content */}
+          <div className="w-full lg:flex-1 lg:max-w-4xl bg-eerie-black-2 dark:bg-eerie-black-2 border border-jet dark:border-jet rounded-2xl sm:rounded-[20px] p-5 sm:p-7 lg:p-8 shadow-shadow-1">
+            <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
+            <div className="content-area pt-8 sm:pt-10">
+              {renderContent()}
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
 
-export default HomePage
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+};

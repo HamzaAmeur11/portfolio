@@ -1,0 +1,74 @@
+{
+  "common": {
+    "name": "Hamza Ameur",
+    "title": "Développeur Full Stack & Mobile",
+    "showContacts": "Afficher les contacts",
+    "hideContacts": "Masquer les contacts"
+  },
+  "nav": {
+    "about": "À propos",
+    "resume": "CV",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "intro1": "Je suis développeur Full Stack et Mobile, étudiant à 42 Paris. Je conçois des produits web, mobiles et desktop fiables avec React Native, React, Next.js et NestJS.",
+    "intro2": "Mon expérience couvre la conception d’API REST, les applications avec PostgreSQL, les fonctionnalités temps réel avec Socket.IO, l’optimisation des performances et le travail collaboratif avec Git.",
+    "whatImDoing": "Ce que je fais",
+    "services": {
+      "webDesign": {
+        "title": "Développement Full Stack",
+        "description": "Applications web modernes avec React, Next.js, Node.js et NestJS."
+      },
+      "webDevelopment": {
+        "title": "Développement d’API",
+        "description": "API REST robustes, intégration de données et architecture maintenable."
+      },
+      "mobileApps": {
+        "title": "Applications mobiles",
+        "description": "Applications multiplateformes avec React Native et TypeScript."
+      },
+      "photography": {
+        "title": "Systèmes temps réel",
+        "description": "Expériences interactives avec WebSockets et Socket.IO."
+      }
+    },
+    "testimonials": "Témoignages",
+    "clients": "Clients"
+  },
+  "resume": {
+    "title": "CV",
+    "education": "Éducation",
+    "experience": "Expérience",
+    "mySkills": "Mes compétences"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "all": "Tous",
+    "webDesign": "Design web",
+    "applications": "Applications",
+    "webDevelopment": "Développement web",
+    "selectCategory": "Sélectionner une catégorie"
+  },
+  "blog": {
+    "title": "Blog",
+    "design": "Design",
+    "readMore": "Lire la suite"
+  },
+  "contact": {
+    "title": "Contact",
+    "formTitle": "Formulaire de contact",
+    "fullName": "Nom complet",
+    "email": "Adresse e-mail",
+    "message": "Votre message",
+    "sendMessage": "Envoyer le message"
+  },
+  "sidebar": {
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "birthday": "Anniversaire",
+    "location": "Localisation"
+  }
+}

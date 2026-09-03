@@ -1,40 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Next.js
+
+A modern personal portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+✅ **Next.js 14** with TypeScript  
+✅ **Tailwind CSS** for styling  
+✅ **Dark/Light Mode** toggle with next-themes  
+✅ **Internationalization (i18n)** with next-i18next (English, French, Spanish)  
+✅ **Responsive Design** - Mobile-first approach  
+✅ **Reusable Components** - Clean and maintainable code structure  
+✅ **Smooth Animations** - Modern UI/UX experience  
+
+## Project Structure
+
+```
+refactorNext/
+├── components/          # Reusable React components
+│   ├── Sidebar.tsx
+│   ├── Navbar.tsx
+│   ├── About.tsx
+│   ├── Resume.tsx
+│   ├── Portfolio.tsx
+│   ├── Blog.tsx
+│   ├── Contact.tsx
+│   ├── ThemeToggle.tsx
+│   └── LanguageSwitcher.tsx
+├── pages/              # Next.js pages
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   └── index.tsx
+├── public/             # Static assets
+│   └── locales/        # Translation files
+│       ├── en/
+│       ├── fr/
+│       └── es/
+├── styles/             # Global styles
+│   └── globals.css
+└── Configuration files
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Dependencies
+
+```bash
+cd refactorNext
+npm install
+```
+
+### 2. Copy Assets
+
+Copy the `assets` folder from your original project to the `public` folder:
+
+```bash
+cp -r ../assets ./public/
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features Implementation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 🌓 Dark/Light Mode
 
-## Learn More
+Toggle between themes using the button in the top-right corner. The theme preference is saved in localStorage.
 
-To learn more about Next.js, take a look at the following resources:
+### 🌍 Multi-language Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Switch between English, French, and Spanish using the language selector. Translation files are in `public/locales/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 📱 Responsive Design
 
-## Deploy on Vercel
+- Mobile-first approach
+- Optimized for all screen sizes
+- Touch-friendly navigation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All components are refactored from the original HTML:
+- **Sidebar**: Contact information and social links
+- **Navbar**: Page navigation
+- **About**: Services, testimonials, and clients
+- **Resume**: Education, experience, and skills
+- **Portfolio**: Project gallery with filtering
+- **Blog**: Blog posts grid
+- **Contact**: Contact form with map
+
+## Customization
+
+### Update Personal Information
+
+Edit translation files in `public/locales/[lang]/common.json`
+
+### Modify Styles
+
+- Global styles: `styles/globals.css`
+- Tailwind config: `tailwind.config.js`
+- Component-specific styles: Use Tailwind classes in components
+
+### Add New Languages
+
+1. Create a new folder in `public/locales/` (e.g., `de` for German)
+2. Add `common.json` with translations
+3. Update `next-i18next.config.js` to include the new locale
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS
+- **next-themes** - Theme management
+- **next-i18next** - Internationalization
+- **React 18** - UI library
+
+## License
+
+This project is open source and available under the MIT License.
