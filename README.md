@@ -45,7 +45,7 @@ refactorNext/
 ### 1. Install Dependencies
 
 ```bash
-cd refactorNext
+cd portfolio
 npm install
 ```
 
